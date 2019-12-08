@@ -1,0 +1,53 @@
+\documentclass[UTF8]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[T2A]{fontenc}
+\usepackage{amsmath}
+\title{Домашнее задание 2}
+\author{Чжоу Гуаньюй}
+\date{\today}
+\begin{document}
+\section*{Задача 1}
+\[f(x)=\ln{(\cos{x})},\quad n=4\]
+\begin{equation*}
+\begin{aligned}
+&f^{(1)}(x)=-\tan{x},\quad f^{(1)}(0)=-\tan{0}=0 \\
+&f^{(2)}(x)=-\frac{1}{\cos^2{x}} ,\quad f^{(2)}(0)=-\frac{1}{\cos^2{0}}=-1\\
+&f^{(3)}(x)=-2\cdot \frac{\tan{x}}{\cos{x}},\quad f^{(3)}(0)=-2\cdot \frac{\tan{0}}{\cos{0}}=0\\
+&f^{(4)}(x)=-2\cdot \frac{1+\sin^2{x}}{\cos^3{x}},\quad f^{(4)}(0)=-2\cdot \frac{1+\sin^2{0}}{\cos^3{0}}=-2
+\end{aligned}
+\end{equation*}
+\[f(x)=-\frac{x^2}{2}-\frac{x^4}{12}+\circ( x^4)\]
+
+\section*{Задача 2}
+\[\lim_{x \to 0} \frac{\cos{x}-e^{-\frac{x^2}{2}}}{x^4}\]
+Solve:
+\begin{equation*}
+\begin{aligned}
+& \cos{x}=1-\frac{x^2}{2}+\circ (x^2) ,\quad e^{-\frac{x^2}{2}}=1-\frac{x^2}{2}+\circ (x^2)\\
+&\lim_{x \to 0} \frac{\cos{x}-e^{-\frac{x^2}{2}}}{x^4}=\lim_{x \to 0} \frac{1-\frac{x^2}{2}+\circ (x^2)-(1-\frac{x^2}{2}+\circ (x^2))}{x^4}=\\
+&=\lim_{x \to 0} \frac{0}{x^4}=0
+\end{aligned}
+\end{equation*}
+Answer:
+\[\lim_{x \to 0} \frac{\cos{x}-e^{-\frac{x^2}{2}}}{x^4}=0\]
+\section*{Задача 3}
+\begin{equation*}
+\begin{aligned}
+&y=-x^3+3x+2\\
+&y'=-3x^2+3\\
+&y''=-6x\\
+\end{aligned}
+\end{equation*}
+\[
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline $x\in$ & $(-\infty, -1)$& [-1,0) &[0,1) &[1,2) & $[2,+\infty)$ \\
+\hline $y$ &>0&$\ge$ 0& >0 &>0 & $\leq 0$ \\
+\hline $y'$&<0&>0&> 0&$\ge <0$&<0 \\
+\hline $y''$&>0&>0&$\leq 0$&<0&<0 \\
+\hline
+\end{tabular}\]
+\begin{center}
+\includegraphics[width= 0.8\textwidth]{p.3.eps}
+\end{center}
+\end{document}
