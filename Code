@@ -3,51 +3,165 @@
 \usepackage{graphicx}
 \usepackage[T2A]{fontenc}
 \usepackage{amsmath}
-\title{Домашнее задание 2}
+\title{Д/З 3}
 \author{Чжоу Гуаньюй}
 \date{\today}
-\begin{document}
-\section*{Задача 1}
-\[f(x)=\ln{(\cos{x})},\quad n=4\]
-\begin{equation*}
-\begin{aligned}
-&f^{(1)}(x)=-\tan{x},\quad f^{(1)}(0)=-\tan{0}=0 \\
-&f^{(2)}(x)=-\frac{1}{\cos^2{x}} ,\quad f^{(2)}(0)=-\frac{1}{\cos^2{0}}=-1\\
-&f^{(3)}(x)=-2\cdot \frac{\tan{x}}{\cos{x}},\quad f^{(3)}(0)=-2\cdot \frac{\tan{0}}{\cos{0}}=0\\
-&f^{(4)}(x)=-2\cdot \frac{1+\sin^2{x}}{\cos^3{x}},\quad f^{(4)}(0)=-2\cdot \frac{1+\sin^2{0}}{\cos^3{0}}=-2
-\end{aligned}
-\end{equation*}
-\[f(x)=-\frac{x^2}{2}-\frac{x^4}{12}+\circ( x^4)\]
 
-\section*{Задача 2}
-\[\lim_{x \to 0} \frac{\cos{x}-e^{-\frac{x^2}{2}}}{x^4}\]
-Solve:
+\begin{document}
+\maketitle
+%\tableofcontents
+\section*{Задача 1}
+\[f(x)=x\arccos{x}-\sqrt{1-x^2},\quad n=3\]
 \begin{equation*}
 \begin{aligned}
-& \cos{x}=1-\frac{x^2}{2}+\circ (x^2) ,\quad e^{-\frac{x^2}{2}}=1-\frac{x^2}{2}+\circ (x^2)\\
-&\lim_{x \to 0} \frac{\cos{x}-e^{-\frac{x^2}{2}}}{x^4}=\lim_{x \to 0} \frac{1-\frac{x^2}{2}+\circ (x^2)-(1-\frac{x^2}{2}+\circ (x^2))}{x^4}=\\
-&=\lim_{x \to 0} \frac{0}{x^4}=0
+&f(0)=0-1=-1.\\
+&f'(x)=\arccos{x},\quad f'(0)=\arccos{0}=0 \\
+&f''(x)=-\dfrac{1}{\sqrt{1-x^2}} ,\quad f''(0)=-\dfrac{1}{\sqrt{1-x^2}}=-1\\
+&f^{(3)}(x)=-\dfrac{x}{\sqrt{1-x^2}(1-x^2)},\quad f^{(3)}(0)=-\frac{0}{\sqrt{1-0}(1-0)}=0\\
 \end{aligned}
 \end{equation*}
-Answer:
-\[\lim_{x \to 0} \frac{\cos{x}-e^{-\frac{x^2}{2}}}{x^4}=0\]
-\section*{Задача 3}
+\[f(x)=-1+0-\frac{x^2}{2}+0+\circ (x^3)=-1-\frac{x^2}{2}+\circ(x^3)\]
+\section*{Задача 2}
+\subsection*{а)}
 \begin{equation*}
 \begin{aligned}
 &y=-x^3+3x+2\\
 &y'=-3x^2+3\\
 &y''=-6x\\
+f(1)=4
 \end{aligned}
 \end{equation*}
 \[
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline $x\in$ & $(-\infty, -1)$& [-1,0) &[0,1) &[1,2) & $[2,+\infty)$ \\
 \hline $y$ &>0&$\ge$ 0& >0 &>0 & $\leq 0$ \\
-\hline $y'$&<0&>0&> 0&$\ge <0$&<0 \\
+\hline $y'$&<0&>0&> 0&$\leq0$&<0 \\
 \hline $y''$&>0&>0&$\leq 0$&<0&<0 \\
 \hline
 \end{tabular}\]
 \begin{center}
-\includegraphics[width= 0.8\textwidth]{p.3.eps}
+\includegraphics[width= 0.9\textwidth]{p33.eps}
 \end{center}
+\subsection*{б)}
+\begin{equation*}
+\begin{aligned}
+&y=\sqrt{2+x}-\sqrt{2-x}\\
+&y'=\frac{1}{2\sqrt{2+x}}-\frac{1}{2\sqrt{2-x}}\\
+&y''=\frac{4}{\sqrt{(2+x)^3}}-\frac{1}{4\sqrt{(2+x)^3}}
+\end{aligned}
+\end{equation*}
+\[
+\begin{tabular}{|c|c|c|}
+\hline $x\in$ & (-2,0)&[0,2) \\
+\hline $y$ &<0&>0 \\
+\hline $y'$&>0&<0 \\
+\hline $y''$&<0&>0 \\
+\hline
+\end{tabular}\]
+\[y(-2)=-2,y(2)=2\]
+\includegraphics[width= 1\textwidth]{p35.eps}
+\newpage
+\subsection*{в)}
+\begin{equation*}
+\begin{aligned}
+&y=\sin{x}+\frac{\sin{2x}}{2}.\\
+&y'=\cos{x}+\cos{2x}.\\
+&y''=-\sin{x}-2\sin{2x}.\\
+\end{aligned}
+\end{equation*}
+Анализ:\\
+1)Давайте начнем с $y$:\\
+\[y=\sin{x}+\frac{\sin{2x}}{2}=\sin{x}+\sin{x}\cos{x}\]
+Замена $\sin{x}=t$,то:\\
+\[y=t+t\sqrt{1-t^2}\]
+После расчета,мы получим:\\
+При $t\in (0,1]\Rightarrow  x \in (2k\pi,2k\pi+\pi),y>0.$\\
+При $t\in[-1,0)\Rightarrow x \in (2k\pi+\pi,2k\pi+2\pi),y<0.$\\
+При $t=0\Rightarrow x=k\pi,y=0.$\\
+(где $k \in \mathbf{Z}$)\\
+Давайте подумаем о диапазоне функции:\\
+\begin{equation*}
+\begin{aligned}
+-1<&\sin{x}<1\\
+-1<&\sin{2x}<1\\
+-\dfrac{1}{2}<&\dfrac{\sin{2x}}{2}<\dfrac{1}{2}\\
+-1-\dfrac{1}{2}<\sin{x}&+\dfrac{\sin{2x}}{2}<1+\dfrac{1}{2}\\
+-\dfrac{3}{2}<\sin{x}&+\dfrac{\sin{2x}}{2}<\dfrac{3}{2}
+\end{aligned}
+\end{equation*}
+2)$y'$:\\
+\[y'=\cos{x}+\cos{2x}=2\cos^2{x}+\cos{x}-1\]
+Замена $\cos{x}=t$, то:\\
+\[y=t^2+t-1\]
+После расчета,мы получим:\\
+При $t\in(\dfrac{1}{2},\infty)\Rightarrow \cos{x}\in(\dfrac{1}{2},1)\Rightarrow x\in(2k\pi,\dfrac{\pi}{3}+2k\pi)\cup (\dfrac{5\pi}{3},2k\pi+\pi),y'>0$\\
+При $t\in(-1,\dfrac{1}{2})\Rightarrow x\in (\dfrac{\pi}{3}+2k\pi,\dfrac{5\pi}{3}+2k\pi),y'<0.$\\
+При $t_1=-1,t_2=\dfrac{1}{2}\Rightarrow x_1=\dfrac{\pi}{3}+2k\pi,x_2=\dfrac{5\pi}{3}+2k\pi,x_3=\pi+2k\pi,y'=0.$\\
+(где $k \in \mathbf{Z}$)\\
+\\
+3)$y''$:\\
+\[y''=-\sin{x}-2\sin{2x}=-\sin{x}-4\sin{x}\cos{x}\]
+Замена $\sin{x}=t$,то:\\
+\[y''=-t-4t\sqrt{1-t^2}\]
+После расчета,мы получим:\\
+При $t\in (0,1],\Rightarrow x \in (2k\pi,2k\pi+\pi),y<0.$\\
+При $t\in[-1,0)\Rightarrow x \in (2k\pi+\pi,2k\pi+2\pi),y>0.$\\
+При $t=0\Rightarrow x=k\pi,y=0.$\\
+(где $k \in \mathbf{Z}$)\\
+\\
+И, наконец, у нас есть график:\\
+\includegraphics[width= 1\textwidth]{p38.eps}
+\newpage
+\subsection*{Г)}
+\begin{equation*}
+\begin{aligned}
+&y=x-\arctan{5x}\\
+&y'=1-\frac{5}{1+25x^2}\\
+&y''=\frac{250x}{(1+25x^2)^2}
+\end{aligned}
+\end{equation*}
+при $x_1 \approx -1.432, x_2 \approx 1.432$, $x-\arctan{5x}=0$.
+\[
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline $x\in$ & $(-\infty, x_1)$& $[x_1,-\frac{2}{5})$ &$[-\frac{2}{5},0)$ &$[0,\frac{2}{5})$ & $(\frac{2}{5},x_2)$&$[x_2,+\infty)$ \\
+\hline $y$ &$<0$&$ \ge 0$& $> 0$ &$\leq0$ & $< 0$&$\ge 0$ \\
+\hline $y'$&$>0$&$>0$&$\leq 0$&$<0$&$\ge 0$&$ >0 $\\
+\hline $y''$&$<0$&$<0$&$<0$&$\ge 0$&$>0$&$>0$ \\
+\hline
+\end{tabular}\]
+\includegraphics[width= 1\textwidth]{p36.eps}
+\newpage
+\subsection*{д)}
+\begin{equation*}
+\begin{aligned}
+&y=\frac{1}{x\ln{x}}\\
+&y'=-\frac{\ln{x}+1}{x^2\cdot \ln^2{x}}\\
+&y''=\frac{2\ln^2{x}+3\ln{x}+2}{x^3\cdot \ln^3{x}}
+\end{aligned}
+\end{equation*}
+\[x> 0\quad and\quad x \neq -1\]
+\[
+\begin{tabular}{|c|c|c|c|}
+\hline $x\in$ & $(0,\frac{1}{e})$& $[\frac{1}{e},1)$ &$(1,+\infty)$   \\
+\hline $y$ &$<0$&$ < 0$& $> 0$  \\
+\hline $y'$&$>0$&$\leq 0$&$< 0$\\
+\hline $y''$&$<0$&$<0$&$>0$\\
+\hline
+\end{tabular}\]
+\includegraphics[width= 01\textwidth]{p37.eps}
+\newpage
+\section*{Задача 3}
+Сначал, замена$DB=x$, то:$DC=\sqrt{x^2+b^2},AD=a-x$.\\
+Мы можем создать функцию$f(x)$, в которой независимой переменной является $x$, а зависимой переменной является стоимость транспортировки:\\
+\[f(x)=p(a-x)+q\sqrt{x^2+b^2}\]
+Чтобы найти экстремальное значение этой функции, давайте возьмем производную:\\
+\[f'(x)=-px+q\dfrac{x}{\sqrt{x^2+b^2}}=q\dfrac{x}{\sqrt{x^2+b^2}}-px\]
+При $f'(x)=0$,то $x=\sqrt{\dfrac{q^2}{p^2}-b^2}$, и \\
+\[f'(x)
+\begin{cases}
+<0, &x<\sqrt{\dfrac{q^2}{p^2}-b^2} \\
+>0, &x>\sqrt{\dfrac{q^2}{p^2}-b^2}
+\end{cases}\]
+Поэтому при $x=\sqrt{\dfrac{q^2}{p^2}-b^2}$,функция получает минимум, стоимость транспортировки получает минимум.
+
 \end{document}
